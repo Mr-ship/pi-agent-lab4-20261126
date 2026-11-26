@@ -13,19 +13,19 @@ GitHub：`Mr-ship` · 2026 年 11 月 26 日
 | 413 | `await streamFunction(...)` 的正上方 | Agent 即将把转换好的上下文交给模型调用函数 |
 | 285 | `for (const result of toolResults)` 循环内，紧接 `currentContext.messages.push(result)` | 一条工具结果已加入上下文 |
 
-![S1 模型调用前的日志](S1.png)
+![S1 模型调用前的日志](screenshots/S1.png)
 
-![S2 工具结果加入上下文后的日志](S2.png)
+![S2 工具结果加入上下文后的日志](screenshots/S2.png)
 
 ## 2. 重新编译与启动
 
 在含根 `package.json` 的 `pi-hunnu-2026` 目录运行 `npm run build`，构建完成后读取 `$LASTEXITCODE`，结果为 `0`。随后用 `node .\packages\coding-agent\dist\cli.js` 启动 Pi `v1.5.2`。S4 追加 `--tui-mode regular`，使启动命令和交互界面同时留在终端中。
 
-![S3a 项目根目录中的构建命令](S3a.png)
+![S3a 项目根目录中的构建命令](screenshots/S3a.png)
 
-![S3b 构建完成并返回退出码 0](S3b.png)
+![S3b 构建完成并返回退出码 0](screenshots/S3b.png)
 
-![S4 编译产物的启动命令和交互界面](S4.png)
+![S4 编译产物的启动命令和交互界面](screenshots/S4.png)
 
 公开版截图已遮盖本机路径。
 
@@ -47,7 +47,7 @@ Pi 的最终回复：
 
 > Git 分支是一条指向某次提交的可移动指针，它让你能脱离主线独立开发，最后再合并回主线。
 
-![S5 会话 A 的指令、回复和日志](S5.png)
+![S5 会话 A 的指令、回复和日志](screenshots/S5.png)
 
 ### B：读取文件
 
@@ -73,9 +73,9 @@ Pi 的最终回复：
 >
 > 实验代号：**HNNU-P4-CEDAR-7K26**
 
-![S6a 会话 B 的指令、read 记录、回复和界面日志](S6a.png)
+![S6a 会话 B 的指令、read 记录、回复和界面日志](screenshots/S6a.png)
 
-![S6b 同一次 B 会话保留的完整 P4 日志](S6b.png)
+![S6b 同一次 B 会话保留的完整 P4 日志](screenshots/S6b.png)
 
 ## 4. 调用流程对比
 
